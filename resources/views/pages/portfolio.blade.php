@@ -9,7 +9,7 @@
                     <input class="form-control" type="file" id="formFile" name="photo" required>
                 </div>
 
-                <select class="form-select" aria-label="Default select example" name="category">
+                <select class="form-select mb-3" aria-label="Default select example" name="category">
                     <option selected>Select Category</option>
                     <option value="wedding">Wedding</option>
                     <option value="outdoor">Outdoor</option>
@@ -35,7 +35,7 @@
         </div>
     </div>
     <div class="py-5"></div>
-    <div>
+    <div style="min-height: 70vh">
         <div class="container">
             <div class="row">
                 @foreach($photos as $photo)

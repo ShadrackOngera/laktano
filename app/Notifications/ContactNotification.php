@@ -41,9 +41,9 @@ class ContactNotification extends Notification
      */
     public function toTelegram($notifiable)
     {
-        $post = 'New Blog Posted' . "\n\n";
-        $post .= 'Title: ' . $this->contact->name . "\n";
-        $post .= 'Email: ' . $this->contact->email . "\n";
+        $post = 'Incoming' . "\n\n";
+        $post .= 'Name: ' . $this->contact->name . "\n";
+        $post .= 'Email: ' . $this->contact->email . "\n\n";
         $post .= 'Message: ' . $this->contact->message . "\n";
 
 

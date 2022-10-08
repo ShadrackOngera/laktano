@@ -47,7 +47,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6 align-self-center">
-                <h2>Photgraphy</h2>
+                <h2>Photography</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi perspiciatis sed sequi suscipit tempore. Eligendi in modi odit sint voluptas.
                 </p>

@@ -17,7 +17,7 @@
                     <a class="nav-link" href="{{ route('photos.index') }}">{{ __('Portfolio') }}</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('pricing') }}">{{ __('Pricing') }}</a>
+                    <a class="nav-link" href="{{ route('pricing.index') }}">{{ __('Pricing') }}</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('contact') }}">{{ __('Contact') }}</a>

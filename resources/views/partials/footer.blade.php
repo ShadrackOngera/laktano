@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-4">
-                Join Our MAiling list
+                Join our mailing list
             </div>
             <div class="col-sm-2">
                 Pages
@@ -14,7 +14,7 @@
                         <a class="nav-link" href="{{ route('photos.index') }}">{{ __('Portfolio') }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('pricing') }}">{{ __('Pricing') }}</a>
+                        <a class="nav-link" href="{{ route('pricing.index') }}">{{ __('Pricing') }}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('contact') }}">{{ __('Contact') }}</a>

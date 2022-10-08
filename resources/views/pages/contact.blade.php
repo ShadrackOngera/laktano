@@ -1,18 +1,18 @@
 @extends('layouts.app')
 @section('content')
-    <div>
-        <div class="container">
-            <h1 class="fw-bold">
+    <div style="min-height: 20vh">
+        <div class="container align-self-center">
+            <h1 class="fw-bold text-center align-self-center">
                 Leave a Message
             </h1>
         </div>
     </div>
 
-    <div>
+    <div style="min-height: 70vh">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
-                    <img src="{{ asset('images/pics/art.jpg') }}" alt="..." class="img-fluid">
+                <div class="col-sm-6 align-self-center mb-3">
+                    <img src="{{ asset('images/pics/booth.jpg') }}" alt="..." class="img-fluid">
                 </div>
                 <div class="col-sm-6">
                     <form action="{{ route('contacts.store') }}" method="post">
@@ -44,4 +44,5 @@
             </div>
         </div>
     </div>
+    <div class="py-5"></div>
 @endsection

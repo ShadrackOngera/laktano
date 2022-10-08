@@ -26,6 +26,8 @@ Route::post('/contacts', [App\Http\Controllers\ContactController::class, 'store'
 
 //portfolio routes
 Route::resource('photos', \App\Http\Controllers\PhotosController::class);
+Route::resource('pricing', \App\Http\Controllers\PricingController::class);
+Route::delete('/pricing/{id}/destroy', [App\Http\Controllers\PricingController::class, 'destroy'])->name('pricing.destroy');
 
 Auth::routes();
 
