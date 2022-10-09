@@ -22,7 +22,7 @@
             @include('partials.nav')
         </section>
 
-        <main class="py-4">
+        <main class="">
             @yield('content')
         </main>
 

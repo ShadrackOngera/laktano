@@ -46,6 +46,10 @@
                                 <div class="text-center">
                                     <small>{{ $photo->description }}</small>
                                 </div>
+                                <div class="d-flex justify-content-between">
+                                    <small></small>
+                                    <small class="text-capitalize">&afr; {{ $photo->category }}</small>
+                                </div>
                             </div>
                         </div>
                     </div>

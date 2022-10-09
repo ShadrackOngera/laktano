@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
-            {{ config('app.name', 'Laravel') }}
+        <a class="navbar-brand py-0" href="{{ url('/') }}">
+            <img src="{{ asset('images/pics/logo-black-smaller.png') }}" alt="logo" class="img-fluid">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
@@ -9,7 +9,9 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
-            <ul class="navbar-nav me-auto">
+
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
                 </li>
@@ -26,8 +28,6 @@
                     <a class="nav-link" href="{{ route('about') }}">{{ __('About') }}</a>
                 </li>
             </ul>
-
-            <!-- Right Side Of Navbar -->
 {{--            <ul class="navbar-nav ms-auto">--}}
 {{--                <!-- Authentication Links -->--}}
 {{--                @guest--}}

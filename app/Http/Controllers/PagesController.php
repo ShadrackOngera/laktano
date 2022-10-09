@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mailing;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -23,6 +24,19 @@ class PagesController extends Controller
 
 
         return view('pages.about');
+    }
+
+    public function storeEmail(Request $request){
+        $request->validate([
+            'email' => 'required',
+        ]);
+
+
+        $mailing = Mailing::create([
+            'email' => $request->input('email'),
+        ]);
+
+        return redirect()->back();
     }
 
 }

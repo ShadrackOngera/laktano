@@ -132,7 +132,7 @@
                 <div class="col-sm-4">
                     <div class=" border-0">
                         <div class="card-body">
-                            <img src="{{ asset('images/pics/wedding.jpg') }}" alt="..." class="img-fluid w-100 rounded-1">
+                            <img src="{{ asset('images/pics/ring.jpg') }}" alt="..." class="img-fluid w-100 rounded-1">
                             <p class="text-center py-3">
                                 Wedding Photos
                             </p>
@@ -165,9 +165,9 @@
                 <div class="col-sm-4">
                     <div class=" border-0">
                         <div class="card-body">
-                            <img src="{{ asset('images/pics/wedding.jpg') }}" alt="..." class="img-fluid w-100 rounded-1">
+                            <img src="{{ asset('images/pics/dog.jpg') }}" alt="..." class="img-fluid w-100 rounded-1">
                             <p class="text-center py-3">
-                                Wedding Photos
+                                Animal Photography
                             </p>
                         </div>
                     </div>

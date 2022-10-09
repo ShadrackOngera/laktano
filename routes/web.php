@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [App\Http\Controllers\PagesController::class, 'homePage'])->name('home');
-Route::get('/pricing', [App\Http\Controllers\PagesController::class, 'pricingPage'])->name('pricing');
+Route::post('/store-email', [App\Http\Controllers\PagesController::class, 'storeEmail'])->name('store-email');
 Route::get('/about', [App\Http\Controllers\PagesController::class, 'aboutPage'])->name('about');
 
 //contact routes
