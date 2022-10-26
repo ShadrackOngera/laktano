@@ -1,10 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="banner-pricing">
-        <div class="container">
 
-        </div>
-    </div>
     <div class="py-5"></div>
     <div>
         <div class="container">

@@ -1,4 +1,5 @@
-<div>
+<div class="bg-footer">
+    <div class="py-4"></div>
     <div class="container">
         <div class="row">
             <div class="col-sm-4 align-self-center">
@@ -89,4 +90,5 @@
             </div>
         </div>
     </div>
+    <div class="py-5"></div>
 </div>
