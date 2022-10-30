@@ -23,10 +23,10 @@
                     </form>
                 </div>
             </div>
-            <div class="col-sm-2 text-center">
-                <span class="text-indigo">
+            <div class="col-sm-2 text-center mb-3">
+                <h4 class="text-indigo mb-0">
                     Quick Links
-                </span>
+                </h4>
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
@@ -45,8 +45,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-sm-2 align-self-center">
+            <div class="col-sm-2 align-self-center text-center mb-3">
                 <ul class="navbar-nav">
+                    <h4 class="text-indigo mb-0">Socials</h4>
                     <li class="nav-item">
                         <a href="https://www.instagram.com/walter.photography.ke/" target="_blank" class="nav-link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="ig-gradient bi bi-instagram" viewBox="0 0 16 16">
