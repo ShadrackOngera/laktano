@@ -39,20 +39,25 @@
     <div class="py-5"></div>
 
     <div class="container">
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{{ route('filters.wedding') }}">Wedding</a></li>
-                <li><a class="dropdown-item" href="{{ route('filters.outdoor') }}">Outdoor</a></li>
-                <li><a class="dropdown-item" href="{{ route('filters.family') }}">Family</a></li>
-                <li><a class="dropdown-item" href="{{ route('filters.pregnant') }}">Pregnant</a></li>
-                <li><a class="dropdown-item" href="{{ route('filters.portrait') }}">Portrait</a></li>
-                <li><a class="dropdown-item" href="{{ route('filters.couple') }}">Couple</a></li>
-                <li><a class="dropdown-item" href="{{ route('filters.nature') }}">Nature</a></li>
-                <li><a class="dropdown-item" href="{{ route('filters.creative') }}">Creative</a></li>
-            </ul>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <div class="dropdown d-grid">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Choose Category
+                    </button>
+                    <ul class="dropdown-menu w-100 text-center">
+                        <li><a class="dropdown-item" href="{{ route('filters.wedding') }}">Wedding</a></li>
+                        <li><a class="dropdown-item" href="{{ route('filters.outdoor') }}">Outdoor</a></li>
+                        <li><a class="dropdown-item" href="{{ route('filters.family') }}">Family</a></li>
+                        <li><a class="dropdown-item" href="{{ route('filters.pregnant') }}">Pregnant</a></li>
+                        <li><a class="dropdown-item" href="{{ route('filters.portrait') }}">Portrait</a></li>
+                        <li><a class="dropdown-item" href="{{ route('filters.couple') }}">Couple</a></li>
+                        <li><a class="dropdown-item" href="{{ route('filters.nature') }}">Nature</a></li>
+                        <li><a class="dropdown-item" href="{{ route('filters.creative') }}">Creative</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -65,7 +70,7 @@
                         <div class="card border-0 shadow">
                             <div class="card-body">
                                 <small class="text-capitalize float-end">&afr; {{ $photo->category }}</small>
-                                <img src="{{ asset('storage/'.$photo->photo) }}" alt="My Work" class="img-fluid mb-2">
+                                <img src="{{ asset('storage/'.$photo->photo) }}" alt="My Work" class="img-fluid mb-2 w-100">
                                 <div class="text-center">
                                     <small>{{ $photo->description }}</small>
                                 </div>
