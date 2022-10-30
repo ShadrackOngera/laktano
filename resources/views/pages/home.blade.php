@@ -12,22 +12,22 @@
             <div class="carousel-item active">
                 <img src="{{ asset('images/pics/caving.jpg') }}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5>Annie Leibovitz</h5>
+                    <p>“The camera makes you forget you’re there. It’s not like you are hiding but you forget, you are just looking so much.”</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="{{ asset('images/pics/slide.jpg') }}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
+                    <h5>Patience and Flexibility</h5>
+                    <p>No matter how much you try to control every variable, things just won’t go your way at times.</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="{{ asset('images/pics/ice.jpg') }}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
+                    <h5>An Eye for Detail</h5>
+                    <p>Even the tiniest detail can make or break a photograph.</p>
                 </div>
             </div>
         </div>
@@ -46,13 +46,13 @@
 <div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 align-self-center">
+            <div class="col-sm-6 align-self-center mb-2">
                 <h2>Photography</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi perspiciatis sed sequi suscipit tempore. Eligendi in modi odit sint voluptas.
+                    Photography is the art, application, and practice of creating durable images by recording light, either electronically by means of an image sensor, or chemically by means of a light-sensitive material such as photographic film or Digital image.
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Photography is important because we can document something and have it forever and use it to re-kindle memories.
                 </p>
             </div>
             <div class="col-sm-6 align-self-center">
@@ -67,21 +67,21 @@
     <div>
         <div class="container">
             <div class="row">
-                <div class="col-sm-5 align-self-center">
-                    <img src="{{ asset('images/pics/ice.jpg') }}" alt="..." class="img-fluid">
+                <div class="col-sm-5 align-self-center mb-3">
+                    <img src="{{ asset('images/pics/yellow-photographer.jpg') }}" alt="..." class="img-fluid rounded-3">
                 </div>
                 <div class="col-sm-7 align-self-center">
                     <h2 class="text-center">
                         Why Choose Us
                     </h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, dolore doloribus!
+                        There are many important components to creating a stunning photograph. Some of the most important are your ability to capture the right light, the right composition, and the right moment.
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium commodi corporis doloremque eaque enim esse exercitationem expedita itaque libero, quidem ratione rem!
+                        With us, you are able to perceive the world from different perspectives and appreciate the most diverse scenarios and situations captured in a frozen moment.
                     </p>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem expedita fugiat ipsa labore molestiae placeat quae.
+                        From our <a href="{{ route('photos.index') }}">Portfolio page</a>, We are able to Demonstrate our capabilities, from Creativity and Imagination, An eye for detail, Patience and Flexibility to Passion
                     </p>
                 </div>
             </div>
@@ -89,10 +89,11 @@
     </div>
 
     <div class="py-5"></div>
+    <div class="py-3"></div>
 
     <div>
         <div class="container">
-            <h2 class="text-center fw-bold text-uppercase">
+            <h2 class="text-center fw-bold text-uppercase mb-5">
                 We Are Professionals In:
             </h2>
             <div class="row">
@@ -194,6 +195,7 @@
                 </div>
             </div>
 
+            <div class="py-5"></div>
             <div class="text-center">
                 <small class="">
                     “Photography is a way of feeling, of touching, of loving. What you have caught on film is captured forever… It remembers little things, long after you have forgotten everything.”

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
-    <div style="min-height: 20vh">
+    <div class="py-5"></div>
+    <div style="min-height: 10vh">
         <div class="container align-self-center">
             <h1 class="fw-bold text-center align-self-center">
                 Leave a Message
