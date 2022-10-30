@@ -37,6 +37,26 @@
         </div>
     @endcan
     <div class="py-5"></div>
+
+    <div class="container">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="{{ route('filters.wedding') }}">Wedding</a></li>
+                <li><a class="dropdown-item" href="{{ route('filters.outdoor') }}">Outdoor</a></li>
+                <li><a class="dropdown-item" href="{{ route('filters.family') }}">Family</a></li>
+                <li><a class="dropdown-item" href="{{ route('filters.pregnant') }}">Pregnant</a></li>
+                <li><a class="dropdown-item" href="{{ route('filters.portrait') }}">Portrait</a></li>
+                <li><a class="dropdown-item" href="{{ route('filters.couple') }}">Couple</a></li>
+                <li><a class="dropdown-item" href="{{ route('filters.nature') }}">Nature</a></li>
+                <li><a class="dropdown-item" href="{{ route('filters.creative') }}">Creative</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="py-5"></div>
     <div style="min-height: 70vh">
         <div class="container">
             <div class="row">
@@ -44,13 +64,10 @@
                     <div class="col-sm-4 mb-3">
                         <div class="card border-0 shadow">
                             <div class="card-body">
+                                <small class="text-capitalize float-end">&afr; {{ $photo->category }}</small>
                                 <img src="{{ asset('storage/'.$photo->photo) }}" alt="My Work" class="img-fluid mb-2">
                                 <div class="text-center">
                                     <small>{{ $photo->description }}</small>
-                                </div>
-                                <div class="d-flex justify-content-between">
-                                    <small></small>
-                                    <small class="text-capitalize">&afr; {{ $photo->category }}</small>
                                 </div>
                             </div>
                         </div>

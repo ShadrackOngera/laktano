@@ -30,6 +30,17 @@ Route::resource('photos', \App\Http\Controllers\PhotosController::class);
 Route::resource('pricing', \App\Http\Controllers\PricingController::class);
 Route::delete('/pricing/{id}/destroy', [App\Http\Controllers\PricingController::class, 'destroy'])->name('pricing.destroy');
 
+//filter Routes
+//Route::resource('filters', \App\Http\Controllers\FiltersController::class);
+Route::get('/wedding', [App\Http\Controllers\FiltersController::class, 'wedding'])->name('filters.wedding');
+Route::get('/outdoor', [App\Http\Controllers\FiltersController::class, 'outdoor'])->name('filters.outdoor');
+Route::get('/family', [App\Http\Controllers\FiltersController::class, 'family'])->name('filters.family');
+Route::get('/pregnant', [App\Http\Controllers\FiltersController::class, 'pregnant'])->name('filters.pregnant');
+Route::get('/portrait', [App\Http\Controllers\FiltersController::class, 'portrait'])->name('filters.portrait');
+Route::get('/couple', [App\Http\Controllers\FiltersController::class, 'couple'])->name('filters.couple');
+Route::get('/nature', [App\Http\Controllers\FiltersController::class, 'nature'])->name('filters.nature');
+Route::get('/creative', [App\Http\Controllers\FiltersController::class, 'creative'])->name('filters.creative');
+
 Route::group(['middleware' => ['role:admin']], function () {
     Route::get('/admin', [App\Http\Controllers\AdminController::class, 'adminHome'])->name('admin');
     Route::get('/admin/users', [App\Http\Controllers\AdminController::class, 'allUsers'])->name('users');
