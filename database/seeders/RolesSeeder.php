@@ -20,6 +20,7 @@ class RolesSeeder extends Seeder
         //Roles
         $adminRole = Role::create(['name' => 'admin']);
         $moderatorRole = Role::create(['name' => 'moderator']);
+        $clientRole = Role::create(['name' => 'client']);
 
         //Permissions
         $uploadPhotoPermission = Permission::create(['name' => 'upload photo']);
@@ -29,9 +30,13 @@ class RolesSeeder extends Seeder
         $deleteUserPermission = Permission::create(['name' => 'delete User']);
 
 
+
         $adminRole->givePermissionTo($uploadPhotoPermission, $deletePhotoPermission, $editPhotoPermission, $deleteUserPermission);
 
         $moderatorRole->givePermissionTo($uploadPhotoPermission, $deletePhotoPermission, $editPhotoPermission);
+
+        $clientRole->revokePermissionTo($uploadPhotoPermission, $deletePhotoPermission, $editPhotoPermission, $deleteUserPermission);
+
 
         $user = User::where('id', 1)->first();
         $user->assignRole('admin');

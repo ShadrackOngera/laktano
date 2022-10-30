@@ -2,38 +2,43 @@
 @section('content')
 
     <div class="py-5"></div>
-    <div>
-        <div class="container">
-            <form action="{{ route('pricing.store') }}" method="POST">
-                @csrf
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Photography Type" name="type" required>
-                    <label for="floatingInput">Photography Type</label>
-                </div>
+    @can('upload photo')
+        <div>
+            <div class="container">
+                <h3 class="text-center">
+                    ADD ANOTHER PRICING TYPE
+                </h3>
+                <form action="{{ route('pricing.store') }}" method="POST">
+                    @csrf
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Photography Type" name="type" required>
+                        <label for="floatingInput">Photography Type</label>
+                    </div>
 
-                <div class="form-floating mb-3">
-                    <input type="number" class="form-control" id="floatingInput" placeholder="Price" name="price" required>
-                    <label for="floatingInput">Price</label>
-                </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="floatingInput" placeholder="Price" name="price" min="10" required>
+                        <label for="floatingInput">Price</label>
+                    </div>
 
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Number of Photos" name="quantity" required>
-                    <label for="floatingInput">Number of Photos</label>
-                </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Number of Photos" name="quantity" required>
+                        <label for="floatingInput">Number of Photos</label>
+                    </div>
 
-                <div class="form-floating mb-3">
-                    <textarea class="form-control" placeholder="Description" id="floatingTextarea2" style="height: 100px" name="description"></textarea>
-                    <label for="floatingTextarea2">Description</label>
-                </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" placeholder="Description" id="floatingTextarea2" style="height: 100px" name="description"></textarea>
+                        <label for="floatingTextarea2">Description</label>
+                    </div>
 
-                <div class="d-grid">
-                    <button class="btn btn-primary" type="submit">
-                        Add
-                    </button>
-                </div>
-            </form>
+                    <div class="d-grid">
+                        <button class="btn btn-primary" type="submit">
+                            Add
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
-    </div>
+    @endcan
     <div class="py-5"></div>
     <div>
         <div class="container">
