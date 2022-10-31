@@ -67,12 +67,12 @@
             <div class="row">
                 @foreach($photos as $photo)
                     <div class="col-sm-4 mb-3">
-                        <div class="card border-0 shadow">
+                        <div class="border-0 shadow">
                             <div class="card-body">
-                                <small class="text-capitalize float-end">&afr; {{ $photo->category }}</small>
-                                <img src="{{ asset('storage/'.$photo->photo) }}" alt="My Work" class="img-fluid mb-2 w-100">
-                                <div class="text-center">
-                                    <small>{{ $photo->description }}</small>
+                                <div class="position-relative">
+                                    <small class="text-capitalize">{{ $photo->category }}</small>
+                                    <img src="{{ asset('storage/'.$photo->photo) }}" alt="My Work" class="img-fluid w-100">
+                                    <small class="bg-description translate-middle-x text-capitalize">{{ $photo->description }}</small>
                                 </div>
                             </div>
                         </div>
