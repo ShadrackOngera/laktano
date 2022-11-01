@@ -44,7 +44,10 @@ Route::get('/creative', [App\Http\Controllers\FiltersController::class, 'creativ
 Route::group(['middleware' => ['role:admin']], function () {
     Route::get('/admin', [App\Http\Controllers\AdminController::class, 'adminHome'])->name('admin');
     Route::get('/admin/users', [App\Http\Controllers\AdminController::class, 'allUsers'])->name('users');
+    Route::get('/admin/emails', [App\Http\Controllers\AdminController::class, 'mailing'])->name('mailing');
+    Route::get('/admin/emails/export', [App\Http\Controllers\AdminController::class, 'exportMails'])->name('export.mails');
     Route::post('/admin/makeModerator', [\App\Http\Controllers\AdminController::class, 'makeModerator'])->name('makeModerator');
+    Route::post('/admin/makeAdmin', [\App\Http\Controllers\AdminController::class, 'makeAdmin'])->name('makeAdmin');
     Route::post('/admin/makeClient', [\App\Http\Controllers\AdminController::class, 'makeClient'])->name('makeClient');
 });
 

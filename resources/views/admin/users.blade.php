@@ -13,8 +13,9 @@
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
                         <th scope="col">email</th>
-                        <th scope="col">Assign Role</th>
-                        <th scope="col">Revoke Role</th>
+                        <th scope="col">Assign</th>
+                        <th scope="col">Assign</th>
+                        <th scope="col">Revoke Role(s)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,6 +36,17 @@
                         </td>
 
                         <td>
+                            <form action="{{ route('makeAdmin') }}" method="POST">
+                                @csrf
+                                <input type="text" value="{{ $user->id }}" hidden name="user_id">
+
+                                <button class="btn btn-outline-info" type="submit">
+                                    Admin
+                                </button>
+                            </form>
+                        </td>
+
+                        <td>
                             <form action="{{ route('makeClient') }}" method="POST">
                                 @csrf
                                 <input type="text" value="{{ $user->id }}" hidden name="user_id">
@@ -48,6 +60,12 @@
                 @endforeach
                 </tbody>
             </table>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            {!! $units->links("pagination::bootstrap-4") !!}
         </div>
     </div>
 @endsection

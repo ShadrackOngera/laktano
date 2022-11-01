@@ -67,7 +67,7 @@
             <div class="row">
                 @foreach($photos as $photo)
                     <div class="col-sm-4 mb-3">
-                        <div class="border-0 shadow">
+                        <div class="shadow">
                             <div class="card-body">
                                 <div class="position-relative">
                                     <small class="text-capitalize">{{ $photo->category }}</small>
@@ -79,6 +79,12 @@
                     </div>
                 @endforeach
             </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            {!! $units->links("pagination::bootstrap-4") !!}
         </div>
     </div>
 @endsection
