@@ -49,7 +49,7 @@ class ContactNotification extends Notification
 
 
         return TelegramMessage::create()
-            ->to('-867589804')
+            ->to('-1001865766556')
             ->content("UP \n\n" . $post);
     }
 

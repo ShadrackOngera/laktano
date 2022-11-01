@@ -98,6 +98,6 @@ class PricingController extends Controller
     {
         Pricing::where('id', $id)->delete();
 
-        return redirect('/');
+        return redirect()->back();
     }
 }

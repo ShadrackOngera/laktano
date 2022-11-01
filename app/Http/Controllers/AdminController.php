@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use App\Models\Mailing;
 use App\Models\User;
 use Barryvdh\DomPDF\Facade\Pdf;
@@ -18,6 +19,12 @@ class AdminController extends Controller
         //
         $users = User::paginate(20)->except('id', 1);;
         return view('admin.users')->with('users', $users);
+    }
+
+    public function allMessages(){
+        //
+        $messages = Contact::orderBy('created_at', 'DESC')->paginate(20);
+        return view('admin.messages')->with('messages', $messages);
     }
 
     public function mailing(){
