@@ -16,7 +16,7 @@ class AdminController extends Controller
 
     public function allUsers(){
         //
-        $users = User::paginate(20);
+        $users = User::paginate(20)->except('id', 1);;
         return view('admin.users')->with('users', $users);
     }
 
@@ -79,5 +79,12 @@ class AdminController extends Controller
         $msg = 'User Id '. $userId . ' Has No Roles ';
 
         return redirect('/admin/users')->with('message', $msg);
+    }
+
+    public function destroy($id)
+    {
+        User::where('id', $id)->delete();
+
+        return redirect()->back();
     }
 }

@@ -16,6 +16,7 @@
                         <th scope="col">Assign</th>
                         <th scope="col">Assign</th>
                         <th scope="col">Revoke Role(s)</th>
+                        <th scope="col">Delete User</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -56,6 +57,18 @@
                                 </button>
                             </form>
                         </td>
+
+                        @can('delete user')
+                            <td>
+                                <form action="{{ route('delete.user', ["id" => $user->id]) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn btn-outline-danger">
+                                        Delete User
+                                    </button>
+                                </form>
+                            </td>
+                        @endcan
                     </tr>
                 @endforeach
                 </tbody>
@@ -63,9 +76,9 @@
         </div>
     </div>
 
-    <div class="container">
-        <div class="d-flex justify-content-center">
-            {!! $units->links("pagination::bootstrap-4") !!}
-        </div>
-    </div>
+{{--    <div class="container">--}}
+{{--        <div class="d-flex justify-content-center">--}}
+{{--            {!! $users->links("pagination::bootstrap-4") !!}--}}
+{{--        </div>--}}
+{{--    </div>--}}
 @endsection

@@ -27,7 +27,7 @@ class RolesSeeder extends Seeder
         $deletePhotoPermission = Permission::create(['name' => 'delete photo']);
         $editPhotoPermission = Permission::create(['name' => 'edit photo']);
 
-        $deleteUserPermission = Permission::create(['name' => 'delete User']);
+        $deleteUserPermission = Permission::create(['name' => 'delete user']);
 
 
 

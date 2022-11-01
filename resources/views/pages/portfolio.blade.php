@@ -84,7 +84,7 @@
 
     <div class="container">
         <div class="d-flex justify-content-center">
-            {!! $units->links("pagination::bootstrap-4") !!}
+            {!! $photos->links("pagination::bootstrap-4") !!}
         </div>
     </div>
 @endsection
