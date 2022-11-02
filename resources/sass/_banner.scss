@@ -8,3 +8,28 @@
     padding-top: 0;
     padding-bottom: 0;
 }
+
+.banner-about {
+    background-image: url(../images/banners/stripe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    min-height: 35vh;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.banner-about-two {
+    background-image: url(../images/banners/pineapple.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    min-height: 35vh;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.banner-about-two:hover {
+    transform: scaleX(-1);
+}
