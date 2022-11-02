@@ -11,15 +11,50 @@
     </div>
 
     <div class="container">
-        <div class="row">
-            <h4 class="text-center">
+        <div class="row text-center">
+            <h4 class="">
                 Website Navigation
             </h4>
+            <hr>
             <div class="col-sm-4">
-
+                <h3>Normal user pages</h3>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('photos.index') }}">{{ __('Portfolio') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('pricing.index') }}">{{ __('Pricing') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('contact') }}">{{ __('Contact') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('about') }}">{{ __('About') }}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-4">
+                <h3>Admin Pages</h3>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin') }}">{{ __('Admin') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('users') }}">{{ __('Users') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('messages') }}">{{ __('Messages') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('mailing') }}">{{ __('Mailing list') }}</a>
+                    </li>
+                </ul>
             </div>
             <div class="col-sm-4"></div>
-            <div class="col-sm-4"></div>
+            <hr>
         </div>
     </div>
 

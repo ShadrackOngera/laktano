@@ -43,6 +43,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('about') }}">{{ __('About') }}</a>
                     </li>
+                    @can('upload photo')
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('admin') }}">{{ __('Admin') }}</a>
+                        </li>
+                    @endcan
                 </ul>
             </div>
             <div class="col-sm-2 align-self-center text-center mb-3">

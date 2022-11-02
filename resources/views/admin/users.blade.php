@@ -76,9 +76,16 @@
         </div>
     </div>
 
-{{--    <div class="container">--}}
-{{--        <div class="d-flex justify-content-center">--}}
-{{--            {!! $users->links("pagination::bootstrap-4") !!}--}}
-{{--        </div>--}}
-{{--    </div>--}}
+    <div class="container">
+        <button class="btn btn-outline-primary">
+            <a class="nav-link" href="{{ route('admin') }}">{{ __('Admin Home') }}</a>
+        </button>
+    </div>
+    <div class="py-5"></div>
+
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            {!! $users->links("pagination::bootstrap-4") !!}
+        </div>
+    </div>
 @endsection

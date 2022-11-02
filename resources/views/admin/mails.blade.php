@@ -33,6 +33,13 @@
         </div>
     </div>
 
+    <div class="py-5"></div>
+    <div class="container">
+        <button class="btn btn-outline-primary">
+            <a class="nav-link" href="{{ route('admin') }}">{{ __('Admin Home') }}</a>
+        </button>
+    </div>
+    <div class="py-5"></div>
     <div class="container">
         <div class="d-flex justify-content-center">
             {!! $mails->links("pagination::bootstrap-4") !!}
