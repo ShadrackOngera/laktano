@@ -62,17 +62,36 @@
     </div>
 
     <div class="py-5"></div>
-    <div style="min-height: 70vh">
+    <div>
         <div class="container">
             <div class="row">
                 @foreach($photos as $photo)
-                    <div class="col-sm-4 mb-3">
+                    <div class="col-sm-4 mb-3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <div class="shadow">
                             <div class="card-body">
                                 <div class="position-relative">
                                     <small class="text-capitalize">{{ $photo->category }}</small>
                                     <img src="{{ asset('storage/'.$photo->photo) }}" alt="My Work" class="img-fluid w-100">
                                     <small class="bg-description translate-middle-x text-capitalize">{{ $photo->description }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <div class="position-relative">
+                                        <small class="text-capitalize">{{ $photo->category }}</small>
+                                        <img src="{{ asset('storage/'.$photo->photo) }}" alt="My Work" class="img-fluid w-100">
+                                        <small class="bg-description translate-middle-x text-capitalize">{{ $photo->description }}</small>
+                                    </div>
+                                </div>
+                                <div class="modal-footer d-flex justify-content-between my-0 py-0">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
                                 </div>
                             </div>
                         </div>
@@ -87,4 +106,5 @@
             {!! $photos->links("pagination::bootstrap-4") !!}
         </div>
     </div>
+    <div class="py-5"></div>
 @endsection

@@ -21,7 +21,7 @@ class FiltersController extends Controller
 
         $query = Photo::where('category' ,'outdoor');
         $photos = QueryBuilder::for($query)
-            ->get();
+            ->paginate(20);
 
         return view('pages.portfolio')->with('photos' , $photos);
     }
@@ -30,7 +30,7 @@ class FiltersController extends Controller
 
         $query = Photo::where('category' ,'family');
         $photos = QueryBuilder::for($query)
-            ->get();
+            ->paginate(20);
 
         return view('pages.portfolio')->with('photos' , $photos);
     }
@@ -39,7 +39,7 @@ class FiltersController extends Controller
 
         $query = Photo::where('category' ,'pregnant');
         $photos = QueryBuilder::for($query)
-            ->get();
+            ->paginate(20);
 
         return view('pages.portfolio')->with('photos' , $photos);
     }
@@ -48,7 +48,7 @@ class FiltersController extends Controller
 
         $query = Photo::where('category' ,'portrait');
         $photos = QueryBuilder::for($query)
-            ->get();
+            ->paginate(20);
 
         return view('pages.portfolio')->with('photos' , $photos);
     }
@@ -57,7 +57,7 @@ class FiltersController extends Controller
 
         $query = Photo::where('category' ,'couple');
         $photos = QueryBuilder::for($query)
-            ->get();
+            ->paginate(20);
 
         return view('pages.portfolio')->with('photos' , $photos);
     }
@@ -66,7 +66,7 @@ class FiltersController extends Controller
 
         $query = Photo::where('category' ,'nature');
         $photos = QueryBuilder::for($query)
-            ->get();
+            ->paginate(15);
 
         return view('pages.portfolio')->with('photos' , $photos);
     }
@@ -75,7 +75,7 @@ class FiltersController extends Controller
 
         $query = Photo::where('category' ,'creative');
         $photos = QueryBuilder::for($query)
-            ->get();
+            ->paginate(15);
 
         return view('pages.portfolio')->with('photos' , $photos);
     }
