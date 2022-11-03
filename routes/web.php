@@ -29,6 +29,7 @@ Route::post('/contacts', [App\Http\Controllers\ContactController::class, 'store'
 Route::resource('photos', \App\Http\Controllers\PhotosController::class);
 Route::resource('pricing', \App\Http\Controllers\PricingController::class);
 Route::delete('/pricing/{id}/destroy', [App\Http\Controllers\PricingController::class, 'destroy'])->name('pricing.destroy');
+Route::delete('/photos/{id}/destroy', [App\Http\Controllers\PhotosController::class, 'destroy'])->name('photos.destroy');
 
 //filter Routes
 //Route::resource('filters', \App\Http\Controllers\FiltersController::class);

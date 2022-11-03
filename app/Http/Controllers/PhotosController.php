@@ -92,10 +92,12 @@ class PhotosController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($id)
     {
-        //
+        Photo::where('id', $id)->delete();
+
+        return redirect()->back();
     }
 }

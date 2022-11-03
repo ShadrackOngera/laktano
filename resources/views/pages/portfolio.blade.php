@@ -91,6 +91,15 @@
                                 </div>
                                 <div class="modal-footer d-flex justify-content-between my-0 py-0">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <div>
+                                        <form action="{{ route('photos.destroy', ["id" => $photo->id]) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button class="btn btn btn-outline-danger">
+                                                Delete
+                                            </button>
+                                        </form>
+                                    </div>
                                     <button type="button" class="btn btn-primary">Save changes</button>
                                 </div>
                             </div>
