@@ -42,7 +42,6 @@
     <div class="py-5"></div>
     <div>
         <div class="container">
-            @foreach($pricings as $pricing)
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -55,6 +54,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                    @foreach($pricings as $pricing)
                         <tr>
                             <th scope="row">{{ $pricing->id }}</th>
                             <td>{{ $pricing->type }}</td>
@@ -71,9 +71,9 @@
                                 </form>
                             </td>
                         </tr>
+                    @endforeach
                     </tbody>
                 </table>
-            @endforeach
         </div>
     </div>
 @endsection

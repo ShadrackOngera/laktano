@@ -66,20 +66,20 @@
         <div class="container">
             <div class="row">
                 @foreach($photos as $photo)
-                    <div class="col-sm-4 mb-3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="col-sm-4 mb-3">
                         <div class="shadow">
-                            <div class="card-body">
+                            <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal{{$photo->id}}">
                                 <div class="position-relative">
                                     <small class="text-capitalize">{{ $photo->category }}</small>
                                     <img src="{{ asset('storage/'.$photo->photo) }}" alt="My Work" class="img-fluid w-100">
                                     <small class="bg-description translate-middle-x text-capitalize">{{ $photo->description }}</small>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="exampleModal{{$photo->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body">
