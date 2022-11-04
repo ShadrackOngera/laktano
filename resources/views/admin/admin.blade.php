@@ -53,7 +53,23 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <h3>Admin Forms</h3>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('admin') }}">{{ __('Photography Categories') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('photos.index') }}">{{ __('Portfolio') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('pricing.index') }}">{{ __('Pricing') }}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('mailing') }}">{{ __('Mailing list') }}</a>
+                    </li>
+                </ul>
+            </div>
             <hr>
         </div>
     </div>

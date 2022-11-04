@@ -102,7 +102,7 @@
                                             </form>
                                         </div>
                                     @endcan
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    <a href="{{ Storage::url($photo->photo)}}" target="_blank" class="btn btn-primary" download>Download</a>
                                 </div>
                             </div>
                         </div>
