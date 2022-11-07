@@ -50,7 +50,9 @@
                             <th scope="col">Price</th>
                             <th scope="col">Number of Photos</th>
                             <th scope="col">Description</th>
-                            <th scope="col">Delete</th>
+                            @can('upload photo')
+                                <th scope="col">Delete</th>
+                            @endcan
                         </tr>
                     </thead>
                     <tbody>
@@ -61,15 +63,17 @@
                             <td>{{ $pricing->price }}</td>
                             <td>{{ $pricing->quantity }}</td>
                             <td>{{ $pricing->description }}</td>
-                            <td>
-                                <form action="{{ route('pricing.destroy', ["id" => $pricing->id]) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button class="btn btn btn-outline-danger">
-                                        Delete
-                                    </button>
-                                </form>
-                            </td>
+                            @can('upload photo')
+                                <td>
+                                    <form action="{{ route('pricing.destroy', ["id" => $pricing->id]) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn btn btn-outline-danger">
+                                            Delete
+                                        </button>
+                                    </form>
+                                </td>
+                            @endcan
                         </tr>
                     @endforeach
                     </tbody>
