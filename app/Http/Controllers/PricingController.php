@@ -48,7 +48,8 @@ class PricingController extends Controller
             'type' => $request->input('type'),
             'price' => $request->input('price'),
             'quantity' => $request->input('quantity'),
-            'description' => $request->input('description')
+            'description' => $request->input('description'),
+            'user_id' => auth()->user()->id,
         ]);
 
         return redirect()->back();

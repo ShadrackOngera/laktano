@@ -13,6 +13,7 @@ class Pricing extends Model
         'price',
         'quantity',
         'description',
+        'user_id',
     ];
 
 }

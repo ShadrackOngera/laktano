@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('photo');
             $table->string('category');
             $table->string('description')->nullable();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -48,7 +48,8 @@ class PhotosController extends Controller
         $photo = Photo::create([
             'photo' => $photo_path,
             'category' => $request->input('category'),
-            'description' => $request->input('description')
+            'description' => $request->input('description'),
+            'user_id' => auth()->user()->id,
         ]);
 
         return redirect()->back();

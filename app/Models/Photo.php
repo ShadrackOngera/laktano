@@ -14,6 +14,7 @@ class Photo extends Model
         'photo',
         'category',
         'description',
+        'user_id',
     ];
 
     public function getPhotoUrlAttribute() {
