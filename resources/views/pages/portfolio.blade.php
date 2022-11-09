@@ -6,7 +6,7 @@
                 <form action="{{ route('photos.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Default file input example</label>
+                        <label for="formFile" class="form-label">Hello, Uplaod a Photo Here</label>
                         <input class="form-control" type="file" id="formFile" name="photo" required>
                     </div>
 

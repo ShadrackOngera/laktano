@@ -50,6 +50,7 @@ Route::group(['middleware' => ['role:admin']], function () {
     Route::post('/admin/makeClient', [\App\Http\Controllers\AdminController::class, 'makeClient'])->name('makeClient');
     Route::delete('/admin/{id}/delete', [\App\Http\Controllers\AdminController::class, 'destroy'])->name('delete.user');
     Route::delete('/admin/contact/{id}/destroy', [App\Http\Controllers\ContactController::class, 'destroy'])->name('contacts.destroy');
+    Route::post('/users/role', [App\Http\Controllers\AdminController::class, 'checkRole'])->name('checkRole');
 });
 
 Route::group(['middleware' => ['role:admin|moderator']], function () {

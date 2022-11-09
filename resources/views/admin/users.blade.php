@@ -1,5 +1,15 @@
 @extends('layouts.app')
 @section('content')
+    <div class="container">
+        <div class="align-items-center">
+            @if (\Session::has('message'))
+                <div class="alert alert-success">
+                    {!! \Session::get('message') !!}
+                </div>
+            @endif
+        </div>
+    </div>
+
     <div>
         <div class="container">
             <h2>All Logged in Users</h2>
@@ -13,6 +23,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Name</th>
                         <th scope="col">email</th>
+                        <th scope="col">Role</th>
                         <th scope="col">Assign</th>
                         <th scope="col">Assign</th>
                         <th scope="col">Revoke Role(s)</th>
@@ -27,6 +38,16 @@
                         <th scope="row">{{ $user->id }}</th>
                         <td class="text-capitalize">{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
+                        <td>
+                            <form action="{{ route('checkRole', $user->id) }}" method="POST">
+                                @csrf
+                                <input type="text" value="{{ $user->id }}" hidden name="user_id">
+
+                                <button class="btn btn-outline-info" type="submit">
+                                    Check Role
+                                </button>
+                            </form>
+                        </td>
                         @if($user->id == 1)
                             <td>
                                 你是个屁眼

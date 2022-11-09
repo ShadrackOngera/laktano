@@ -43,6 +43,28 @@ class AdminController extends Controller
         return $pdf->download('mails.pdf');
     }
 
+    public function checkRole(Request $request){
+
+        $request->validate([
+            'user_id' => 'required',
+        ]);
+
+        $userId = $request->input('user_id');
+
+        $user = User::where('id', $userId)->first();
+        $userRole = $user->hasAnyRole(['admin', 'moderator', 'client']);
+
+        if ($userRole == 1)
+            $userRole = 'Admin';
+        elseif ($userRole == 2)
+            $userRole = 'Moderator';
+        elseif ($userRole == 3)
+            $userRole = 'Client';
+
+        $msg = 'User Id: '. $userId . ' Role: ' . $userRole;
+        return redirect('/admin/users')->with('userRole', $userRole)->with('message', $msg);
+    }
+
     public function makeModerator(Request $request){
 
         $request->validate([
@@ -51,6 +73,7 @@ class AdminController extends Controller
 
         $userId = $request->input('user_id');
         $user = User::where('id', $userId)->first();
+        $user->roles()->detach();
         $user->assignRole('moderator');
 
         $msg = 'User Id '. $userId . ' Is now a Moderator ';
@@ -66,6 +89,7 @@ class AdminController extends Controller
 
         $userId = $request->input('user_id');
         $user = User::where('id', $userId)->first();
+        $user->roles()->detach();
         $user->assignRole('admin');
 
         $msg = 'User Id '. $userId . ' Is now an Admin ';
@@ -81,6 +105,7 @@ class AdminController extends Controller
 
         $userId = $request->input('user_id');
         $user = User::where('id', $userId)->first();
+        $user->roles()->detach();
         $user->assignRole('client');
 
         $msg = 'User Id '. $userId . ' Has No Roles ';
