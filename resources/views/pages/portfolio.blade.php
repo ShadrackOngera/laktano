@@ -6,7 +6,7 @@
                 <form action="{{ route('photos.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
-                        <label for="formFile" class="form-label">Hello, Uplaod a Photo Here</label>
+                        <label for="formFile" class="form-label text-center">Hello, Uplaod a Photo Here</label>
                         <input class="form-control" type="file" id="formFile" name="photo" required>
                     </div>
 
@@ -70,7 +70,10 @@
                         <div class="shadow">
                             <a class="nav-link" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal{{$photo->id}}">
                                 <div class="position-relative">
-                                    <small class="text-capitalize">{{ $photo->category }}</small>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-capitalize">{{ $photo->category }}</small>
+                                        <small class="text-capitalize"><span class="fst-italic">20 Downloads</span></small>
+                                    </div>
                                     <img src="{{ asset('storage/'.$photo->photo) }}" alt="My Work" class="img-fluid w-100">
                                     <small class="bg-description translate-middle-x text-capitalize">{{ $photo->description }}</small>
                                 </div>

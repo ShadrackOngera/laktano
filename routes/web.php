@@ -26,7 +26,10 @@ Route::post('/contacts', [App\Http\Controllers\ContactController::class, 'store'
 
 //portfolio routes
 Route::resource('photos', \App\Http\Controllers\PhotosController::class);
-Route::resource('pricing', \App\Http\Controllers\PricingController::class);
+
+//pricing
+Route::get('/pricing', [App\Http\Controllers\pricingController::class, 'index'])->name('pricing.index');
+//Route::resource('pricing', \App\Http\Controllers\PricingController::class);
 
 //filter Routes
 Route::get('/wedding', [App\Http\Controllers\FiltersController::class, 'wedding'])->name('filters.wedding');
@@ -56,6 +59,7 @@ Route::group(['middleware' => ['role:admin']], function () {
 Route::group(['middleware' => ['role:admin|moderator']], function () {
     Route::get('/admin', [App\Http\Controllers\AdminController::class, 'adminHome'])->name('admin');
     Route::delete('/pricing/{id}/destroy', [App\Http\Controllers\PricingController::class, 'destroy'])->name('pricing.destroy');
+    Route::post('/pricing/store', [App\Http\Controllers\pricingController::class, 'store'])->name('pricing.store');
     Route::delete('/photos/{id}/destroy', [App\Http\Controllers\PhotosController::class, 'destroy'])->name('photos.destroy');
 });
 
