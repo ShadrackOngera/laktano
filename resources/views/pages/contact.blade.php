@@ -16,7 +16,7 @@
                     <img src="{{ asset('images/pics/booth.jpg') }}" alt="..." class="img-fluid">
                 </div>
                 <div class="col-sm-6">
-                    <form action="{{ route('contacts.store') }}" method="post">
+                    <form action="{{ route('contacts.store') }}" method="post" class="mb-3">
                         @csrf
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="floatingInput" placeholder="Name" name="name" required>
@@ -40,6 +40,27 @@
                                 Send Message
                             </button>
                         </div>
+                    </form>
+                    <div>
+                        <a href="mailto:shadrack.sme@gmail.com">Leave me a Direct Email</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h1>Contact Us</h1>
+                    <p>If you need any help with anything at all, please don't hesitate to contact us. We would be happy to help.</p>
+
+                    //chat gpt code
+                    <form action="/contact" method="post">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label> <input type="email" class="form-control" id="email"/>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Submit</button> </div>
                     </form>
                 </div>
             </div>
