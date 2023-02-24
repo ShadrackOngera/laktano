@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 
@@ -38,7 +40,17 @@ class RolesSeeder extends Seeder
         $clientRole->revokePermissionTo($uploadPhotoPermission, $deletePhotoPermission, $editPhotoPermission, $deleteUserPermission);
 
 
-        $user = User::where('id', 1)->first();
-        $user->assignRole('admin');
+        /**
+         * Create admin users
+         */
+        $user = \App\Models\User::create([
+            'name' => 'Walter Laktano',
+            'email' => 'walter@domain.com',
+            'password' => Hash::make('WalterLaktano'),
+            'remember_token' => Str::random(10),
+        ]);
+
+        $user->assignRole($adminRole);
+
     }
 }
